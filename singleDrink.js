@@ -7,13 +7,12 @@ const peresentDrink = async() =>{
 console.log(('hello there'));
 const id = localStorage.getItem('drink')
 if(!id){
-    window.location.replace('index.html')
+ window.location.replace('index.html')
 }
 else{
 const drink = await fetchDrinks(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
 displayDrink(drink)
 }
-
 }
 import displayDrink from './src/displaySingleDrink.js';
 
